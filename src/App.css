@@ -1,0 +1,88 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.App__heading {
+  flex: 1 0 0;
+  padding: 0 2px 4px;
+}
+
+.SearchBox {
+  margin-bottom: 20px;
+}
+
+.SearchBox input {
+  width: 100%;
+  padding: 5px 10px;
+  line-height: 24px;
+  border: 1px solid #111;
+}
+
+.EmojiItem {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  height: 44px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.EmojiItem .symbol {
+  font-size: 30px;
+  margin-right: 8px;
+}
+
+.EmojiItem__left,
+.EmojiItem__right {
+  display: flex;
+  align-items: center;
+}
+
+.EmojiItem__right {
+  display: none;
+  color: #ccc;
+}
+
+.EmojiItem:hover {
+  background-color: rgba(255, 230, 204, 0.6);
+}
+
+.EmojiItem:hover .EmojiItem__right {
+  display: flex;
+}
+
+.copy-to-clipboard {
+  transition: all .5s ease;
+}
+
+@keyframes bounce {
+  0%{transform: scale(1);}
+  50%{transform: scale(1.1);}
+  100%{transform: scale(1);}
+}
+
+.copy-to-clipboard.active {
+  animation: bounce 0.3s ease-out 1;
+}
